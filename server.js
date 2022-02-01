@@ -3,11 +3,12 @@ const path = require('path');
 const { clog } = require('./middleware/clog');
 const api = require('./routes/index.js');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3009;
 
 const app = express();
 
 // Import custom middleware, "cLog"
+
 app.use(clog);
 
 // Middleware for parsing JSON and urlencoded form data
@@ -22,14 +23,10 @@ app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
-// GET Route for feedback page
-app.get('/feedback', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/pages/feedback.html'))
-);
 
 // Wildcard route to direct users to a 404 page
 app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/pages/404.html'))
+  res.sendFile(path.join(__dirname, 'public/404.html'))
 );
 
 app.listen(PORT, () =>

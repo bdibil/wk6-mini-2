@@ -1,2 +1,3 @@
-# wk6-mini-2
-MySQL MP
+# Mini-Project: Movie Database
+
+MySQL Mini-Project

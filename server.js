@@ -24,6 +24,21 @@ app.get('/', (req, res) =>
 );
 
 
+
+
+// GET Route for retrieving all the movies
+// app.get('/api/movies', (req, res) => {
+//   res.send('<p>get received for movies list</p>')
+//   // res.status
+// });  
+
+
+
+
+
+
+
+
 // Wildcard route to direct users to a 404 page
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, 'public/404.html'))
